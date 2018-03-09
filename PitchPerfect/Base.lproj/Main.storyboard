@@ -18,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpk-cY-qnr">
-                                <rect key="frame" x="109.5" y="256" width="155" height="155"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpk-cY-qnr">
+                                <rect key="frame" x="110" y="256" width="155" height="155"/>
                                 <state key="normal" image="recordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfX-6q-snU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GX-CN-E0c">
-                                <rect key="frame" x="155.5" y="485" width="64" height="64"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GX-CN-E0c">
+                                <rect key="frame" x="156" y="485" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="2N6-Ww-6zt"/>
                                     <constraint firstAttribute="width" constant="64" id="86M-ec-3G0"/>
@@ -36,8 +36,8 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drM-Pv-cb3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3M-P1-8jE">
-                                <rect key="frame" x="134.5" y="419" width="106.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3M-P1-8jE">
+                                <rect key="frame" x="135" y="419" width="106.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,8 +46,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S3M-P1-8jE" firstAttribute="centerX" secondItem="Gpk-cY-qnr" secondAttribute="centerX" id="FNE-hy-BdQ"/>
-                            <constraint firstItem="3GX-CN-E0c" firstAttribute="top" secondItem="S3M-P1-8jE" secondAttribute="bottom" constant="45" id="Pvr-49-jLJ"/>
-                            <constraint firstItem="Gpk-cY-qnr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qv6-z5-dUT"/>
+                            <constraint firstItem="3GX-CN-E0c" firstAttribute="top" secondItem="S3M-P1-8jE" secondAttribute="bottom" constant="45" id="Pvr-49-jLJ">
+                                <variation key="heightClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="Gpk-cY-qnr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qv6-z5-dUT">
+                                <variation key="heightClass=compact" constant="-50"/>
+                            </constraint>
                             <constraint firstItem="S3M-P1-8jE" firstAttribute="top" secondItem="Gpk-cY-qnr" secondAttribute="bottom" constant="8" id="pY4-r6-Tyu"/>
                             <constraint firstItem="3GX-CN-E0c" firstAttribute="centerX" secondItem="S3M-P1-8jE" secondAttribute="centerX" id="qkt-z6-jZi"/>
                             <constraint firstItem="Gpk-cY-qnr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tPM-vZ-icl"/>
@@ -57,7 +61,9 @@
                     <navigationItem key="navigationItem" id="DT3-fa-Pr2"/>
                     <connections>
                         <outlet property="recordButton" destination="Gpk-cY-qnr" id="98c-a1-E0E"/>
+                        <outlet property="recordButtonYContstraint" destination="Qv6-z5-dUT" id="9OC-g6-jA5"/>
                         <outlet property="recordingLabel" destination="S3M-P1-8jE" id="r86-9b-mmb"/>
+                        <outlet property="stopButtonTopConstraint" destination="Pvr-49-jLJ" id="3wu-QJ-Dze"/>
                         <outlet property="stopRecordButton" destination="3GX-CN-E0c" id="Cog-Bt-Qfc"/>
                         <segue destination="q3E-ye-QMM" kind="show" identifier="stopRecording" id="erN-ee-tk6"/>
                     </connections>
@@ -95,6 +101,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-Vy-S5a">
                                         <rect key="frame" x="0.0" y="164.5" width="375" height="165"/>
@@ -114,6 +121,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1BP-Eh-zOD">
                                         <rect key="frame" x="0.0" y="329.5" width="375" height="164.5"/>
@@ -133,8 +141,10 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <variation key="heightClass=compact" axis="vertical"/>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1V-zC-O5F" userLabel="Stop Button">
                                 <rect key="frame" x="155.5" y="578" width="64" height="64"/>
