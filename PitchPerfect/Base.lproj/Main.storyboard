@@ -61,9 +61,7 @@
                     <navigationItem key="navigationItem" id="DT3-fa-Pr2"/>
                     <connections>
                         <outlet property="recordButton" destination="Gpk-cY-qnr" id="98c-a1-E0E"/>
-                        <outlet property="recordButtonYContstraint" destination="Qv6-z5-dUT" id="9OC-g6-jA5"/>
                         <outlet property="recordingLabel" destination="S3M-P1-8jE" id="r86-9b-mmb"/>
-                        <outlet property="stopButtonTopConstraint" destination="Pvr-49-jLJ" id="3wu-QJ-Dze"/>
                         <outlet property="stopRecordButton" destination="3GX-CN-E0c" id="Cog-Bt-Qfc"/>
                         <segue destination="q3E-ye-QMM" kind="show" identifier="stopRecording" id="erN-ee-tk6"/>
                     </connections>

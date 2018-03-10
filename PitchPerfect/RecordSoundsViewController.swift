@@ -15,8 +15,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!;
     @IBOutlet weak var stopRecordButton: UIButton!;
     @IBOutlet weak var recordingLabel: UILabel!;
-    @IBOutlet weak var recordButtonYContstraint: NSLayoutConstraint!;
-    @IBOutlet weak var stopButtonTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -74,22 +72,5 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             playSoundsVC.recordedAudioURL = recordedAudioURL;
         }
     }
-    //
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        
-        if UIDevice.current.orientation.isLandscape{
-            //print("landscape");
-            
-            //recordButtonYContstraint.constant = -50;
-            //stopButtonTopConstraint.constant = 20;
-         
-        } else{
-            //print("portrait");
-            
-            //recordButtonYContstraint.constant = 0;
-            //stopButtonTopConstraint.constant = 45;
-        }
-    }
-    
 }
 
