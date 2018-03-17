@@ -13,7 +13,6 @@
 		28F26D1E204E43EB001C5B14 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F26D1D204E43EB001C5B14 /* RecordSoundsViewController.swift */; };
 		28F26D21204E43EB001C5B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F26D1F204E43EB001C5B14 /* Main.storyboard */; };
 		28F26D23204E43EB001C5B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F26D22204E43EB001C5B14 /* Assets.xcassets */; };
-		28F26D26204E43EB001C5B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F26D24204E43EB001C5B14 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		28F26D1D204E43EB001C5B14 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		28F26D20204E43EB001C5B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28F26D22204E43EB001C5B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		28F26D25204E43EB001C5B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28F26D27204E43EB001C5B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +61,6 @@
 				28F26D1D204E43EB001C5B14 /* RecordSoundsViewController.swift */,
 				28F26D1F204E43EB001C5B14 /* Main.storyboard */,
 				28F26D22204E43EB001C5B14 /* Assets.xcassets */,
-				28F26D24204E43EB001C5B14 /* LaunchScreen.storyboard */,
 				28F26D27204E43EB001C5B14 /* Info.plist */,
 				28367529204F787C0008BA69 /* PlaySoundsViewController.swift */,
 			);
@@ -129,7 +126,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F26D26204E43EB001C5B14 /* LaunchScreen.storyboard in Resources */,
 				28F26D23204E43EB001C5B14 /* Assets.xcassets in Resources */,
 				28F26D21204E43EB001C5B14 /* Main.storyboard in Resources */,
 			);
@@ -158,14 +154,6 @@
 				28F26D20204E43EB001C5B14 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		28F26D24204E43EB001C5B14 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28F26D25204E43EB001C5B14 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -226,6 +214,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UY2549FQJ7;
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nwarner.ios.PitchPerfect;
